@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.myapps.pixel_wallpapers_app"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.myapps.wallapers_app"
@@ -36,6 +36,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -52,7 +56,8 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")
-    implementation ("com.github.bumptech.glide:ksp:4.11.0")
+//    implementation ("com.github.bumptech.glide:ksp:4.11.0")
+//    kapt ("com.github.bumptech.glide:compiler:4.14.2")
 
     implementation ("com.squareup.picasso:picasso:2.8")
 
@@ -60,7 +65,7 @@ dependencies {
 
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation ("com.github.chrisbanes:PhotoView:2.0.0")
+//    implementation ("com.github.chrisbanes:PhotoView:2.0.0")
 
     annotationProcessor ("androidx.room:room-compiler:2.6.0")
 }

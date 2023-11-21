@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +17,19 @@
         android:theme="@style/Theme.Wallapers_App"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.myapps.wallapers_app.DisplayWallpaper"
+            android:exported="false" />
+        <activity
+            android:name="com.myapps.wallapers_app.MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name="com.myapps.wallapers_app.MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_2"
+            android:exported="false" />
+        <activity
+            android:name="com.myapps.wallapers_app.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

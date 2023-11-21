@@ -20,6 +20,7 @@ class ViewModel(val repository: WallpaperRepository):ViewModel() {
         viewModelScope.launch {
             val response = repository.getWallpaper(s)
             wallpaperlist.postValue(response)
+
         }
     }
 }
