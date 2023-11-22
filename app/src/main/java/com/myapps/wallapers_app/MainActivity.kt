@@ -63,6 +63,8 @@ class MainActivity : AppCompatActivity() {
 
         setupRecyclerView()
 
+        viewModel.setDefaultWallpaper()
+
         viewModel.wallpaperlist.observe(this, Observer {praveen->
             if(praveen.isSuccessful){
                 val response = praveen.body()

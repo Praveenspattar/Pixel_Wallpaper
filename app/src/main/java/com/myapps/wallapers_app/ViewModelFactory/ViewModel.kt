@@ -13,7 +13,6 @@ class ViewModel(val repository: WallpaperRepository):ViewModel() {
 
     init {
         wallpaperlist = MutableLiveData()
-        getWallpaper("nature")
     }
 
     fun getWallpaper(s: String){
@@ -23,4 +22,7 @@ class ViewModel(val repository: WallpaperRepository):ViewModel() {
 
         }
     }
+
+    fun setDefaultWallpaper(){ getWallpaper("nature")}
+
 }
